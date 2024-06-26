@@ -155,7 +155,7 @@ nav a:hover span {
 #projects h4 {
   font-size: 1rem;
   font-family: var(--mono);
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 .blackbox {
   background: var(--black);
@@ -181,6 +181,17 @@ nav a:hover span {
   border-top: 1px solid var(--aqua);
   border-radius: 25px;
   padding: 1rem;
+}
+/* Certification */
+#projects .cert {
+  flex-flow: column wrap;
+  gap: 0.5rem;
+}
+#projects ul + h4 {
+  margin-top: 2em;
+}
+#projects .cert a {
+  color: var(--aqua);
 }
 
 /* contact section  */
