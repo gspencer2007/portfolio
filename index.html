@@ -1,126 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" 
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <nav>
-    <ul>
-      <li><h1>
-        <a href="index.html">
-          <span class="fa-solid fa-ghost" aria-hidden="true"></span> <span>Geoffrey Spencer</span>
-          </a>
-        </h1></li>
-      <li><a href="index.html#projects">Projects</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-      <!-- <li>
-        <a href="#" target="_blank">
-          <span class="fa-brands fa-linkedin" aria-hidden="true"></span><span class="sr-only">LinkedIn</span>
-        </a></li> -->
-      <li>
-        <a href="https://github.com/gspencer2007" target="_blank">
-          <span class="fa-brands fa-github" aria-hidden="true"></span><span class="sr-only">Github</span></a>
-        </li>
-      <li><a href="docs/GS_CV_2024.pdf" class="button" target="_blank" download>Resume</a></li>
-    </ul>
-  </nav>
-  <section id="intro">
-    <p>Hi, my name is <span>Geoffrey Spencer.</span></p> 
-    <h2>I design the front end of websites.</h2>
-    <p>I'm a designer specializing in HTML, CSS, and Photoshop.</p> 
-    <p>Currently, I'm completing the <a href="https://www.skillsoft.com/" target="_blank">UI and UX Design Novice to Professional</a> learning path from Skillsoft.</p>
-  </section>
-  <div class="gradient"></div>
-  <div class="section-dkblue">
-    <section id="projects">
-      <h2>Projects I'm proud of</h2>
-      <article>
-        <div class="text">
-          <h4>Latest Project</h4>
-          <h3>Journey Around the World</h3>
-          <p class="blackbox">This is a responsive <a href="demo/demo.html">demo</a> website I created of a fictional character named Jared. He loves showcasing his photography on his blog. Exploring the world one camera shutter press at a time. His work is constantly displayed in publications. Jared is also offering his services as a photographer at reasonable prices. If you need a photographer, he is your guy.</p>
-          <h4>Technologies used include:</h4>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geoffrey's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <!-- Navigation -->
+      <header class="wrapper">
+        <nav>
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li><a href="index.html">GS</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
+        </nav>
+      </header>
+    </div>
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="mini-wrap hero-txt">
+          <h1>Creative Dreamer</h1>
+          <p>I'm a creative specializing in web development and graphic design.</p>
+          <a href="#services" class="button btn-1">Services</a> <a href="docs/GS_CV_2024.pdf" class="button btn-2 resume" target="_blank" download>Resume</a>
         </div>
-        <img src="img/demo_thumb.jpg" alt="Image of demo site" />
-      </article>
-      <article class="reverse">
-        <div class="text">
-          <h3>Shades</h3>
-          <p class="blackbox">This is a <a href="https://www.behance.net/gallery/200578507/Shades" target="_blank">creative illustration</a> of a photo of my friend of many years. I took this photo a while back. He is such a character. This is one of the neatest photos I have taken as I dip my toes into photography.</p>
-          <h4>Technologies used include:</h4>
+      </section>
+      <!-- Projects -->
+      <section id="projects">
+        <div class="wrapper">
+          <h1>Projects I'm proud of</h1>
+          <article>
+            <div class="text">
+              <h3>Latest Project</h3>
+              <h2>Jared Journey</h2>
+              <p class="blackbox">
+                This is a responsive <a href="demo/demo.html">demo</a> website I created of a fictional character named Jared. He loves showcasing his photography on his blog. Exploring the world, one
+                snap at a time. His work is constantly displayed in publications. If you need a photographer, he is your guy.
+              </p>
+              <h3>Technologies used include:</h3>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <img src="img/demo_thumb.jpg" alt="Image of demo site" />
+          </article>
+          <article class="reverse">
+            <div class="text">
+              <h2>Shades</h2>
+              <p class="blackbox">
+                This is a <a href="https://www.behance.net/gallery/200578507/Shades" target="_blank">creative illustration</a> of a photo of my friend of many years. I took this photo a while back. He
+                is such a character. This is one of the neatest photos I have taken as I dip my toes into photography.
+              </p>
+              <h3>Programs used:</h3>
+              <ul>
+                <li>Photoshop</li>
+              </ul>
+            </div>
+            <img src="img/john_thumb.jpg" alt="Picture of my friend" />
+          </article>
+          <article>
+            <div class="text">
+              <h2>Goodbye Jackie</h2>
+              <p class="blackbox">
+                I designed the <a href="docs/Jackie_Program.pdf" target="_blank" download>obituary</a> for Aunt Jackie's passing. She was not my real aunt; it was what everyone called her. Aunt Jackie
+                used to drop her nephew, my best friend, and me off to school. She had a funny personality and was a caring person. She was loved by many. Rest in peace, Aunt Jackie, we miss you.
+              </p>
+              <h3>Programs used:</h3>
+              <ul>
+                <li>InDesign</li>
+              </ul>
+            </div>
+            <img src="img/jackie_thumb.jpg" alt="Jacqueline Commodore" />
+          </article>
+          <article class="reverse">
+            <div class="text">
+              <h2>Tokyo Punk</h2>
+              <p class="blackbox">
+                This is me experimenting with typography and textures. I call it <a href="https://www.behance.net/gallery/200616149/Tokyo-Punk" target="_blank">Tokyo Punk</a>. Tokyo is spray-painted
+                white on black leather with a splash of red underlining the word. This piece gives off the vibe that whoever spray-painted Tokyo over this piece of leather didn't care.
+              </p>
+              <h3>Programs used:</h3>
+              <ul>
+                <li>Photoshop</li>
+              </ul>
+            </div>
+            <img src="img/jp_thumb.jpg" alt="Tokyo in grunge" />
+          </article>
+        </div>
+      </section>
+      <div class="divider"></div>
+      <!-- About -->
+      <section id="about">
+        <div class="wrapper">
+          <h1>Get to know me</h1>
+          <div class="about">
+            <img class="about-img" src="img/me_thumb.jpg" alt="Picture of myself" />
+            <div class="about-txt">
+              <h2>Just the highlights</h2>
+              <p>
+                Geoffrey Spencer is a talented artist from Hyattsville, Maryland. During his studies, Geoffrey has improved his design skills and knowledge of the Adobe Creative Suite. Currently, he
+                is developing his expertise in web development to complement his understanding of design.
+              </p>
+              <a href="docs/GS_CV_2024.pdf" class="button btn-1 resume" target="_blank" download>Resume</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="divider"></div>
+      <!-- Services -->
+      <section id="services">
+        <div class="wrapper">
+          <h1>What I offer</h1>
+          <div class="skills">
+            <div class="service branding">
+              <h2>Branding</h2>
+              <span class="fa-solid fa-file-pen" aria-hidden="true"></span><span class="sr-only">Branding</span>
+              <ul>
+                <li>Logo & Identity</li>
+                <li>Style Guide</li>
+                <li>Art Direction</li>
+                <li>Design Research</li>
+              </ul>
+              <p>Building a brand visually always starts with a logo. When collaborating together we'll hone in on a concept that is both eye-catching and represents the brand's value and purpose.</p>
+            </div>
+            <div class="service art">
+              <h2>Illustrations</h2>
+              <span class="fa-solid fa-paintbrush" aria-hidden="true"></span><span class="sr-only">Illustrations</span>
+              <ul>
+                <li>Editorial Illustrations</li>
+                <li>Character Design</li>
+              </ul>
+              <p>
+                From vector to raster illustration styles, I have the skills to produce a series of illustrations that have a very stand out and permanent use, such as book illustrations and poster
+                art.
+              </p>
+            </div>
+            <div class="service website">
+              <h2>Website Design</h2>
+              <span class="fa-solid fa-code" aria-hidden="true"></span><span class="sr-only">Web Design</span>
+              <ul>
+                <li>Wireframing</li>
+                <li>UI & UX Design</li>
+                <li>Prototyping</li>
+                <li>Development</li>
+              </ul>
+              <p>If you are looking for a new website with a brand roll out, or need a refresher for your current website, I have experience in frontend web development.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="divider"></div>
+      <!-- Contact -->
+      <section id="contact">
+        <div class="mini-wrap">
+          <h1>Contact me</h1>
+          <p>I'm always interested in hearing about your vision of how you want your site to look like.</p>
+          <p><a href="mailto:gspencer2007@gmail.com" class="button btn-1">Email me</a></p>
+        </div>
+      </section>
+      <div class="divider"></div>
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="wrapper">
+          <h2>Geoffrey Spencer &middot; Creative</h2>
           <ul>
-            <li>Photoshop</li>
+            <!-- <li>
+              <a href="#" target="_blank">
+                <span class="fa-brands fa-linkedin" aria-hidden="true"></span><span class="sr-only">LinkedIn</span>
+              </a>
+            </li> -->
+            <li>
+              <a href="https://github.com/gspencer2007" target="_blank"> <span class="fa-brands fa-github" aria-hidden="true"></span><span class="sr-only">Github</span></a>
+            </li>
+            <li>
+              <a href="mailto:gspencer2007@gmail.com"> <span class="fa-solid fa-envelope"></span><span class="sr-only">Email</span></a>
+            </li>
           </ul>
+          <p><small class="copyright">&copy; 2024 Geoffrey Spencer. All rights reserved.</small></p>
         </div>
-        <img src="img/john_thumb.jpg" alt="Picture of my friend" />
-      </article>
-      <article>
-        <div class="text">
-          <h3>Goodbye Aunt Jackie</h3>
-          <p class="blackbox">I designed the <a href="docs/Jackie_Program.pdf" target="_blank" download>obituary</a> for Aunt Jackie's passing. She was not my real aunt; it was what everyone called her. Aunt Jackie used to drop her nephew, my best friend, and me off to school. She had a funny personality and was a caring person. She was loved by many. Rest in peace, Aunt Jackie, we miss you.</p>
-          <h4>Technologies used include:</h4>
-          <ul>
-            <li>InDesign</li>
-          </ul>
-        </div>
-        <img src="img/jackie_thumb.jpg" alt="Jacqueline Commodore" />
-      </article>
-      <article class="reverse">
-        <div class="text">
-          <h3>Tokyo Punk</h3>
-          <p class="blackbox">This is me experimenting with typography and textures. I call it <a href="https://www.behance.net/gallery/200616149/Tokyo-Punk" target="_black">Tokyo Punk</a>. Tokyo is spray-painted white on black leather with a splash of red underlining the word. This piece gives off the vibe that whoever spray-painted Tokyo over this piece of leather didn't care.</p>
-          <h4>Technologies used include:</h4>
-          <ul>
-            <li>Photoshop</li>
-          </ul>
-        </div>
-        <img src="img/jp_thumb.jpg" alt="Tokyo in grunge" />
-      </article>
-    </section>
-  </div>
-  <div class="gradient"></div>
-  <div class="section-plum">
-    <section id="contact">
-      <h2>Contact me</h2>
-      <p>I'm always interested in hearing about your vision of how you want your site to look like.</p>
-      <p><a href="mailto:gspencer2007@gmail.com" class="button">Email me</a></p>
-    </section>
-  </div>
-  <div class="gradient"></div>
-  <footer id="footer">
-    <h2>Geoffrey Spencer &middot; Designer</h2>
-    <ul>
-      <!-- <li>
-        <a href="#" target="_blank">
-          <span class="fa-brands fa-linkedin" aria-hidden="true"></span><span class="sr-only">LinkedIn</span>
-        </a>
-      </li> -->
-      <li>
-        <a href="https://github.com/gspencer2007" target="_blank">
-        <span class="fa-brands fa-github" aria-hidden="true"></span><span class="sr-only">Github</span>
-        </a>
-      </li>
-      <li>
-        <a href="mailto:gspencer2007@gmail.com">
-        <span class="fa-solid fa-envelope"></span><span class="sr-only">Email</span>
-        </a>
-      </li>
-    </ul> 
-    <p><small>&copy; 2024 Geoffrey Spencer. All rights reserved.</small></p>
-  </footer>
-</body>
+      </footer>
+    </main>
+  </body>
 </html>

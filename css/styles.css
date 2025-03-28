@@ -1,3 +1,16 @@
+/* Site Stylesheet
+  1. Global Styles
+  2. Typography
+  3. Header & Navigation
+  4. Page Structure
+  5. Footer
+  6. Utilities
+  7. Media Queries
+======================================== */
+
+/* 1. Global Styles
+======================================== */
+
 /* 
 
 --NOTE--
@@ -5,10 +18,8 @@
 Remember, every element has a default margin and padding applied to them.
 Remove margin and padding from HTML tags to make them more consistent on multiple browsers.
 
-Alway display your links as block when inside nav 
-
 Use max-width on paragraphs to keep text readable
-@madia (min-width: 58em) {
+@media (min-width: 58em) {
 	p {
     max-width: 38em; | ~ 65-70 characters
   }
@@ -19,21 +30,58 @@ Learn more about responsive images at https://css-tricks.com/a-guide-to-the-resp
 
 */
 
-/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
 :root {
-  --black: #171321;
-  --dkblue: #0d314b;
-  --plum: #4b0d49;
-  --hotmag: #ff17e4;
-  --magenta: #e310cb;
-  --aqua: #86fbfb;
-  --white: #f7f8fa;
-  --font-size: 1.3rem;
-  --mono: "Oxygen mono", monospace;
-  --sans: Oxygen, sans-serif;
+  --white: #fbfaf5; /* Dough */
+  --black: #121212; /* Charcoal Gray */
+  --gray: #808080; /* Gray */
+  /* Primary */
+  --primary-color-50: #d9f4f4;
+  --primary-color-100: #b7e3e5;
+  --primary-color-200: #95d3d6;
+  --primary-color-300: #74c2c7;
+  --primary-color-400: #52b2b8;
+  --primary-color-500: #31a2a9;
+  --primary-color-600: #2d8890;
+  --primary-color-700: #2a6e78; /* Ming */
+  --primary-color-800: #24575e;
+  --primary-color-900: #1e4045;
+  --primary-color-950: #18292b;
+  /* Secondary */
+  --secondary-color-50: #f7d7f1;
+  --secondary-color-100: #f0bfe6;
+  --secondary-color-200: #e9a7db;
+  --secondary-color-300: #e38fd0;
+  --secondary-color-400: #dc77c5;
+  --secondary-color-500: #d65fbb;
+  --secondary-color-600: #ba4fa1;
+  --secondary-color-700: #9e3f87;
+  --secondary-color-800: #82306d;
+  --secondary-color-900: #662053;
+  --secondary-color-950: #4b1139; /* Blackberry */
+  /* Accent */
+  --accent-color-50: #f3efe1;
+  --accent-color-100: #eae2cd;
+  --accent-color-200: #e2d6ba;
+  --accent-color-300: #d9c9a6;
+  --accent-color-400: #d1bd93;
+  --accent-color-500: #c9b180;
+  --accent-color-600: #ac9268;
+  --accent-color-700: #8f7350;
+  --accent-color-800: #735539;
+  --accent-color-900: #523e2c;
+  --accent-color-950: #32281f;
+  --base-size: 1rem;
+  --scale: 1.2;
+  --heading-font: "Poppins", Arial, sans-serif;
+  --body-font: "Lora", Georgia, serif;
+  --h6: calc(var(--base-size) * var(--scale));
+  --h5: calc(var(--h6) * var(--scale));
+  --h4: calc(var(--h5) * var(--scale));
+  --h3: calc(var(--h4) * var(--scale));
+  --h2: calc(var(--h3) * var(--scale));
+  --h1: calc(var(--h2) * var(--scale));
 }
 
-/* border box model: https://css-tricks.com/box-sizing/ */
 html {
   box-sizing: border-box;
 }
@@ -45,118 +93,182 @@ html {
 }
 
 body {
- padding: 0;
- margin: 0;
- font-family: var(--sans);
- background-color: var(--black);
- color: var(--white);
- font-size: var(--font-size);
-}
-
-h1,
-h2,
-h3 {
+  padding: 0;
   margin: 0;
-}
-
-a {
-  color: var(--magenta);
-}
-a:hover {
-  color: var(--hotmag);
-  text-decoration: none;
+  color: var(--black);
+  font-family: var(--body-font);
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: var(--white);
 }
 
 img {
   width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* navbar section */
-nav {
-  font-family: var(--mono);
-  font-size: 80%;
-  padding: 1rem;
-}
-nav h1 a {
-  font-family: var(--sans);
-}
-nav ul {
-  list-style: none;
+figure {
   margin: 0;
   padding: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+/* * {
+    border: 1px solid red;
+} */
+
+/* 2. Typography
+======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.022rem;
+}
+
+h1 {
+  font-size: var(--h1);
+  margin-bottom: 3.5rem;
+  color: var(--secondary-color-950);
+}
+
+h2 {
+  font-size: var(--h2);
+  color: var(--primary-color-700);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+h6 {
+  font-size: var(--h6);
+}
+
+small,
+.text_small {
+  font-size: calc(var(--base-size) / var(--scale));
+}
+
+p {
+  max-width: 38rem;
+}
+
+/* 3. Header & Navigation
+======================================== */
+
+/* Alway display your links as block when inside nav */
+
+.header {
+  background-color: var(--accent-color-400);
+  min-width: 320px;
+  border-bottom: 2px solid var(--accent-color-600);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0.75rem 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  justify-content: space-around;
 }
+
+nav li {
+  flex-basis: 48%;
+  margin-bottom: 0.5rem;
+  font-family: var(--heading-font);
+  font-weight: 400;
+}
+
 nav li:first-child {
   flex-basis: 100%;
   text-align: center;
+  & a {
+    color: black;
+    background-color: transparent;
+  }
 }
-nav [class*="fa-"] {
-  font-size: 150%;
-  color: var(--aqua);
-}
-nav h1 [class*="fa-"] {
-  font-size: 100%;
-  color: var(--aqua);
-}
+
 nav a {
-  color: var(--white);
   text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--white);
+  background-color: var(--primary-color-600);
   display: block;
-}
-nav a:hover {
-  color: var(--magenta);
-}
-nav [class|="fa"]:hover {
-  color: var(--magenta);
-}
-nav a:hover span {
-  color: var(--magenta);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: background-color 400ms ease-out;
+  &:hover {
+    color: var(--accent-color-100);
+    background-color: var(--primary-color-600);
+  }
+  &:active {
+    color: var(--white);
+    background-color: var(--primary-color-700);
+  }
 }
 
-/* intro section */
-#intro {
-  padding: 4rem 1rem 10rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-#intro p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-#intro p:first-child {
-  font-family: var(--mono);
-}
-#intro span {
-  font-family: var(--sans);
-  font-size: 4rem;
-  color: var(--aqua);
-  display: block;
-}
-#intro h2 {
-  font-size: 4rem;
-  font-weight: bold;
+/* 4. Page Structure
+======================================== */
+
+/*  Hero 
+---------------*/
+
+.hero {
+  margin: 6.5rem auto;
 }
 
-/*  projects section */
-#projects {
-  padding: 4rem 1rem;
+.hero h1 {
+  margin-bottom: 1.5rem;
 }
+
+.hero p {
+  margin: 0 auto 1.5rem;
+}
+
+/*  Projects 
+---------------*/
+
 #projects h2 {
-  font-size: 2.5rem;
-  margin-bottom: calc(2.5rem * 1.5);
+  font-size: var(--h4);
 }
+
 #projects h3 {
-  color: var(--aqua);
+  font-size: var(--h6);
 }
-#projects h4 {
-  font-size: 1rem;
-  font-family: var(--mono);
-  margin: 0 0 10px 0;
+
+.text h3:first-child {
+  color: var(--secondary-color-700);
 }
+
+#projects article {
+  margin-bottom: 5rem;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 .blackbox {
   background: var(--black);
   padding: 1rem;
@@ -164,7 +276,17 @@ nav a:hover span {
   color: var(--white);
   font-size: 1rem;
   line-height: 1.5;
+  & a {
+    color: var(--secondary-color-300);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px;
+    transition: color 400ms ease-out;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
+
 #projects ul {
   list-style: none;
   padding: 0;
@@ -172,45 +294,107 @@ nav a:hover span {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  gap: 1rem;
   font-size: 1rem;
 }
-#projects img {
-  margin: 2rem 0 4rem 0;
-  border-left: 1px solid var(--aqua);
-  border-top: 1px solid var(--aqua);
-  border-radius: 25px;
+
+#projects li {
+  margin-right: 1rem;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+#projects p {
+  position: relative;
+  z-index: 1;
+}
+
+article img {
+  margin: 2rem 0 0 0;
+  border-left: 2px solid var(--primary-color-500);
+  border-top: 2px solid var(--primary-color-500);
+  border-radius: 1.5rem;
   padding: 1rem;
-}
-/* Certification */
-#projects .cert {
-  flex-flow: column wrap;
-  gap: 0.5rem;
-}
-#projects ul + h4 {
-  margin-top: 2em;
-}
-#projects .cert a {
-  color: var(--aqua);
+  position: relative;
+  transition: transform 400ms ease-out;
 }
 
-/* contact section  */
-#contact {
-  min-width: 320px;
-  max-width: 400px;
-  margin: 0 auto;
+article:hover img {
+  transform: scale(1.03);
+}
+
+/*  About
+---------------*/
+
+.about-img {
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/*  Services
+---------------*/
+
+#services h1,
+#services h2 {
   text-align: center;
-  padding: 4rem 0.5rem;
-}
-#contact p:last-child {
-  margin-top: 3rem;
 }
 
-/* footer section  */
+.service {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column wrap;
+  margin-bottom: 1.5rem;
+  background: var(--white);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.service ul {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  list-style-type: "\2714";
+}
+
+.service li {
+  margin-right: 1.5rem;
+  &::before {
+    content: " ";
+    padding-left: 0.25rem;
+  }
+}
+
+/* Service Hover Effect */
+
+/* .service h2 {
+  transition: color 400ms ease-out;
+} */
+
+.service:hover h2 {
+  color: var(--primary-color-500);
+}
+
+[class*="fa-"] {
+  width: 100%;
+  text-align: center;
+  font-size: var(--h2);
+  margin-bottom: 1.5rem;
+  transition: transform 400ms ease-out;
+}
+
+.service:hover [class*="fa-"] {
+  transform: scale(1.2);
+}
+
+/* 5. Footer
+======================================== */
+
 footer {
   text-align: center;
-  padding: 4rem 0;
+  margin-bottom: 3rem;
 }
+
 footer ul {
   list-style: none;
   display: flex;
@@ -221,82 +405,281 @@ footer ul {
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  font-size: 3rem;
+  font-size: var(--h2);
 }
 
-/* background-color divs  */
-.section-plum {
-  background-color: var(--plum);
-}
-.section-dkblue {
-  background-color: var(--dkblue);
-}
-.gradient {
-  background: linear-gradient(90deg, rgba(255,23,228,1) 0%, rgba(134,251,251,1) 100%);
-  height: 2px;
+footer a {
+  color: var(--secondary-color-600);
+  transition: color 400ms ease-out;
+  &:hover {
+    color: var(--secondary-color-700);
+  }
+  &:active {
+    color: var(--secondary-color-800);
+  }
 }
 
-/* button style  */
+footer p {
+  max-width: 100%;
+}
+
+/* 6. Utilities
+======================================== */
+
+.wrapper {
+  max-width: 73.5rem; /* 1176px */
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 1.5rem; /* 24px */
+}
+
+.mini-wrap {
+  min-width: 320px;
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
 .button {
-  background-color: var(--magenta);
-  color: var(--white);
-  padding: 0.5rem;
-  border-radius: 5px;
-  font-family: var(--mono);
+  display: inline-block;
+  text-align: center;
   text-decoration: none;
-}
-.button:hover {
+  font-family: var(--heading-font);
+  font-size: 1.2rem;
+  font-weight: 500;
   color: var(--white);
-  background-color: var(--hotmag);
+  width: calc(1.5rem * 7);
+  height: calc(1.5rem * 2);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
 }
 
-/* breakpoints  */
-@media (min-width: 500px) {
+.btn-1 {
+  /* text-shadow: 2px 2px 4px var(--black); */
+  background: var(--secondary-color-500);
+  background: linear-gradient(0deg, var(--secondary-color-600) 35%, var(--secondary-color-500) 100%);
+  border: 1px solid var(--secondary-color-700);
+  &:hover {
+    background: var(--secondary-color-600);
+    background: linear-gradient(0deg, var(--secondary-color-700) 35%, var(--secondary-color-600) 100%);
+    border: 1px solid var(--secondary-color-800);
+  }
+  &:active {
+    background: var(--secondary-color-700);
+    background: linear-gradient(0deg, var(--secondary-color-800) 35%, var(--secondary-color-700) 100%);
+    border: 1px solid var(--secondary-color-900);
+  }
+}
+
+.btn-2 {
+  background: var(--primary-color-500);
+  background: linear-gradient(0deg, var(--primary-color-600) 35%, var(--primary-color-500) 100%);
+  border: 1px solid var(--primary-color-700);
+  border: 1px solid var(--primary-color-700);
+  &:hover {
+    background: var(--primary-color-600);
+    background: linear-gradient(0deg, var(--primary-color-700) 35%, var(--primary-color-600) 100%);
+    border: 1px solid var(--primary-color-800);
+  }
+  &:active {
+    background: var(--primary-color-700);
+    background: linear-gradient(0deg, var(--primary-color-800) 35%, var(--primary-color-700) 100%);
+    border: 1px solid var(--primary-color-900);
+  }
+}
+
+.button.resume {
+  display: block;
+  margin: 1.5rem auto 0;
+}
+
+.divider {
+  max-width: 73.5rem; /* 1176px */
+  min-width: 320px;
+  height: 4px;
+  margin: 5rem auto;
+  padding: 0 1.5rem; /* 24px */
+  background: linear-gradient(90deg, var(--white) 5%, var(--accent-color-600), var(--accent-color-300), var(--white) 95%);
+}
+
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* 7. Media Queries
+======================================== */
+
+/*  Tablet
+---------------*/
+
+@media only screen and (min-width: 550px) {
+  /* Navigation */
+
+  nav ul {
+    justify-content: center;
+    gap: 1.2em;
+  }
+
+  nav li {
+    flex-basis: auto;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    color: black;
+    background-color: transparent;
+    &:hover {
+      color: var(--white);
+    }
+  }
+
+  /* Hero */
+
+  .hero .button {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .button + .button {
+    margin-top: 0;
+  }
+
+  .hero .resume {
+    margin-left: 1.5rem;
+  }
+
+  /* Projects */
+
   article {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
   }
-  #projects img{
+
+  #projects img {
     grid-column: 1/6;
     grid-row: 1/2;
   }
-  #projects .text{
-    grid-column: 5/11;
+
+  #projects .text {
+    grid-column: 5/9;
     grid-row: 1/2;
   }
+
   .text {
     order: 2;
     text-align: right;
+    & p {
+      text-align: left;
+    }
   }
+
   #projects ul {
     justify-content: flex-end;
   }
+
   #projects .reverse .text {
-    grid-column: 1/7;
+    grid-column: 1/5;
     grid-row: 1/2;
     order: 2;
     text-align: left;
   }
+
   #projects .reverse img {
-    grid-column: 6/11;
+    grid-column: 4/9;
     grid-row: 1/2;
     border-left: none;
-    border-right: 1px solid var(--aqua);
+    border-right: 2px solid var(--primary-color-500);
   }
+
   #projects .reverse ul {
     justify-content: flex-start;
   }
 }
-@media (min-width: 800px) {
-  nav,
-  #projects {
-    max-width: 1200px;
-    margin: 0 auto;
+
+/*  Desktop
+---------------*/
+
+@media only screen and (min-width: 800px) {
+  /* Navigation - logo in the  center */
+
+  nav ul {
+    justify-content: flex-end;
   }
+
   nav li:first-child {
     flex-basis: auto;
-    text-align: left;
-    margin-right: auto;
+    margin: 0 auto;
+    order: 2;
+  }
+
+  nav li:nth-child(2),
+  nav li:nth-child(3) {
+    order: 1;
+  }
+
+  nav li:nth-child(4),
+  nav li:nth-child(5) {
+    order: 3;
+  }
+
+  /* About */
+
+  .about {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .about-img {
+    grid-column: span 6 / span 6;
+    grid-row: span 2 / span 2;
+    margin-bottom: 0;
+  }
+
+  .about-txt {
+    grid-column: span 6 / span 6;
+    grid-row: span 2 / span 2;
+    grid-column-start: 7;
+  }
+
+  /* About */
+
+  .about .resume {
+    display: inline-block;
+    margin: 0;
+  }
+
+  /* Services */
+
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 1.5rem;
+  }
+
+  .service {
+    margin-bottom: 0;
+  }
+
+  .branding {
+    grid-column: span 4 / span 4;
+  }
+
+  .art {
+    grid-column: span 4 / span 4;
+    grid-column-start: 5;
+  }
+
+  .website {
+    grid-column: span 4 / span 4;
+    grid-column-start: 9;
   }
 }
