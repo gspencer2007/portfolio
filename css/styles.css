@@ -445,6 +445,7 @@ footer p {
 
 .button {
   display: inline-block;
+  position: relative;
   text-align: center;
   text-decoration: none;
   font-family: var(--heading-font);
@@ -455,6 +456,11 @@ footer p {
   height: calc(1.5rem * 2);
   border-radius: 0.5rem;
   padding: 0.5rem 0;
+  transition: all 0.3s ease-out;
+}
+
+.button:hover {
+  transform: translate(-2px) scale(1.05);
 }
 
 .btn-1 {
