@@ -4,19 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="shortcut icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <script src="js/script.js" defer></script>
   </head>
 
   <body>
-    <div class="header">
+    <div class="masthead">
       <!-- Navigation -->
-      <header class="wrapper">
-        <nav>
+      <header class="container">
+        <nav class="main-nav">
           <ul>
             <li><a href="index.html">GS</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -30,7 +30,7 @@
     <main>
       <!-- Hero -->
       <section class="hero">
-        <div class="mini-wrap hero-txt">
+        <div class="mini-container hero-txt">
           <h1>Creative Dreamer</h1>
           <p>I'm a creative specializing in web development and graphic design.</p>
           <a href="#services" class="button btn-1">Services</a> <a href="docs/GS_CV_2024.pdf" class="button btn-2 resume" target="_blank" download>Resume</a>
@@ -38,9 +38,9 @@
       </section>
       <!-- Projects -->
       <section id="projects">
-        <div class="wrapper">
+        <div class="container">
           <h1>Projects I'm proud of</h1>
-          <article>
+          <article class="project">
             <div class="text">
               <h3>Latest Project</h3>
               <h2>Jared Journey</h2>
@@ -56,7 +56,7 @@
             </div>
             <a href="demo/demo.html"><img src="img/demo_thumb.jpg" alt="Image of demo site" /></a>
           </article>
-          <article class="reverse">
+          <article class="project reverse">
             <div class="text">
               <h2>Shades</h2>
               <p class="blackbox">
@@ -70,7 +70,7 @@
             </div>
             <a href="https://www.behance.net/gallery/200578507/Shades" target="_blank"><img src="img/john_thumb.jpg" alt="Picture of my friend" /></a>
           </article>
-          <article>
+          <article class="project">
             <div class="text">
               <h2>Goodbye Jackie</h2>
               <p class="blackbox">
@@ -84,7 +84,7 @@
             </div>
             <a href="docs/Jackie_Program.pdf" target="_blank" download><img src="img/jackie_thumb.jpg" alt="Jacqueline Commodore" /></a>
           </article>
-          <article class="reverse">
+          <article class="project reverse">
             <div class="text">
               <h2>Tokyo Punk</h2>
               <p class="blackbox">
@@ -103,7 +103,7 @@
       <div class="divider"></div>
       <!-- About -->
       <section id="about">
-        <div class="wrapper">
+        <div class="container">
           <h1>Get to know me</h1>
           <div class="about">
             <img class="about-img" src="img/me_thumb.jpg" alt="Picture of myself" />
@@ -121,7 +121,7 @@
       <div class="divider"></div>
       <!-- Services -->
       <section id="services">
-        <div class="wrapper">
+        <div class="container">
           <h1>What I offer</h1>
           <div class="skills">
             <div class="service branding">
@@ -164,7 +164,7 @@
       <div class="divider"></div>
       <!-- Contact -->
       <section id="contact">
-        <div class="mini-wrap">
+        <div class="mini-container">
           <h1>Contact me</h1>
           <p>I'm always interested in hearing about your vision of how you want your site to look like.</p>
           <p><a href="mailto:gspencer2007@gmail.com" class="button btn-1">Email me</a></p>
@@ -172,8 +172,8 @@
       </section>
       <div class="divider"></div>
       <!-- Footer -->
-      <footer id="footer">
-        <div class="wrapper">
+      <footer class="main-footer">
+        <div class="container">
           <h2>Geoffrey Spencer &middot; Creative</h2>
           <ul>
             <!-- <li>

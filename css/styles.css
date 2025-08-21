@@ -138,8 +138,8 @@ h6 {
 }
 
 h1 {
-  font-size: var(--h1);
   margin-bottom: 3.5rem;
+  font-size: var(--h1);
   color: var(--secondary-color-950);
 }
 
@@ -178,29 +178,29 @@ p {
 
 /* Alway display your links as block when inside nav */
 
-.header {
-  background-color: var(--accent-color-400);
+.masthead {
   min-width: 320px;
+  background-color: var(--accent-color-400);
   border-bottom: 2px solid var(--accent-color-600);
 }
 
-nav ul {
-  list-style-type: none;
+.main-nav ul {
   margin: 0;
   padding: 0.75rem 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  list-style-type: none;
 }
 
-nav li {
-  flex-basis: 48%;
+.main-nav li {
   margin-bottom: 0.5rem;
+  flex-basis: 48%;
   font-family: var(--heading-font);
   font-weight: 400;
 }
 
-nav li:first-child {
+.main-nav li:first-child {
   flex-basis: 100%;
   text-align: center;
   & a {
@@ -209,15 +209,15 @@ nav li:first-child {
   }
 }
 
-nav a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: var(--white);
-  background-color: var(--primary-color-600);
+.main-nav a {
   display: block;
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--white);
   text-align: center;
+  text-decoration: none;
+  background-color: var(--primary-color-600);
+  border-radius: 0.5rem;
   transition: background-color 400ms ease-out;
   &:hover {
     color: var(--accent-color-100);
@@ -250,18 +250,18 @@ nav a {
 /*  Projects 
 ---------------*/
 
-article {
+.project {
   margin-bottom: 5rem;
   &:last-of-type {
     margin-bottom: 0;
   }
 }
 
-article h2 {
+.project h2 {
   font-size: var(--h4);
 }
 
-article h3 {
+.project h3 {
   font-size: var(--h6);
 }
 
@@ -287,7 +287,7 @@ article h3 {
   }
 }
 
-article ul {
+.project ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -297,21 +297,21 @@ article ul {
   font-size: 1rem;
 }
 
-article li {
+.project li {
   margin-right: 1rem;
   &:last-child {
     margin: 0;
   }
 }
 
-article p {
+.project p {
   position: relative;
   z-index: 1;
 }
 
 /* Thumbnail */
 
-article > a img {
+.project > a img {
   margin: 2rem 0 0 0;
   border-left: 2px solid var(--primary-color-500);
   border-top: 2px solid var(--primary-color-500);
@@ -321,7 +321,7 @@ article > a img {
   transition: transform 400ms ease-out;
 }
 
-article:hover img {
+.project:hover img {
   transform: scale(1.03);
 }
 
@@ -379,9 +379,9 @@ article:hover img {
 
 [class*="fa-"] {
   width: 100%;
-  text-align: center;
-  font-size: var(--h2);
   margin-bottom: 1.5rem;
+  font-size: var(--h2);
+  text-align: center;
   transition: transform 400ms ease-out;
 }
 
@@ -392,14 +392,12 @@ article:hover img {
 /* 5. Footer
 ======================================== */
 
-footer {
-  text-align: center;
+.main-footer {
   margin-bottom: 3rem;
+  text-align: center;
 }
 
-footer ul {
-  list-style: none;
-  display: flex;
+.main-footer ul {
   margin: 2rem 0;
   padding: 0;
   display: flex;
@@ -408,9 +406,10 @@ footer ul {
   align-items: center;
   gap: 3rem;
   font-size: var(--h2);
+  list-style: none;
 }
 
-footer a {
+.main-footer a {
   color: var(--secondary-color-600);
   transition: color 400ms ease-out;
   &:hover {
@@ -421,21 +420,21 @@ footer a {
   }
 }
 
-footer p {
+.main-footer p {
   max-width: 100%;
 }
 
 /* 6. Utilities
 ======================================== */
 
-.wrapper {
+.container {
   max-width: 73.5rem; /* 1176px */
   min-width: 320px;
   margin: 0 auto;
   padding: 0 1.5rem; /* 24px */
 }
 
-.mini-wrap {
+.mini-container {
   min-width: 320px;
   max-width: 34rem;
   margin: 0 auto;
@@ -444,18 +443,18 @@ footer p {
 }
 
 .button {
-  display: inline-block;
   position: relative;
+  display: inline-block;
+  width: calc(1.5rem * 7);
+  height: calc(1.5rem * 2);
+  padding: 0.5rem 0;
   text-align: center;
   text-decoration: none;
   font-family: var(--heading-font);
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--white);
-  width: calc(1.5rem * 7);
-  height: calc(1.5rem * 2);
   border-radius: 0.5rem;
-  padding: 0.5rem 0;
   transition: all 0.3s ease-out;
 }
 
@@ -511,14 +510,6 @@ footer p {
   background: linear-gradient(90deg, var(--white) 5%, var(--accent-color-600), var(--accent-color-300), var(--white) 95%);
 }
 
-.clearfix:after {
-  content: " ";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
-
 /* 7. Media Queries
 ======================================== */
 
@@ -528,17 +519,17 @@ footer p {
 @media only screen and (min-width: 550px) {
   /* Navigation */
 
-  nav ul {
+  .main-nav ul {
     justify-content: center;
     gap: 1.2em;
   }
 
-  nav li {
+  .main-nav li {
     flex-basis: auto;
     margin-bottom: 0;
   }
 
-  nav a {
+  .main-nav a {
     color: black;
     background-color: transparent;
     &:hover {
@@ -563,18 +554,18 @@ footer p {
 
   /* Projects */
 
-  article {
+  .project {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
   }
 
-  article > a {
+  .project > a {
     grid-column: 1/6;
     grid-row: 1/2;
   }
 
-  article .text {
+  .project .text {
     grid-column: 5/9;
     grid-row: 1/2;
   }
@@ -587,7 +578,7 @@ footer p {
     }
   }
 
-  article ul {
+  .project ul {
     justify-content: flex-end;
   }
 
@@ -621,23 +612,23 @@ footer p {
 @media only screen and (min-width: 800px) {
   /* Navigation - logo in the  center */
 
-  nav ul {
+  .main-nav ul {
     justify-content: flex-end;
   }
 
-  nav li:first-child {
+  .main-nav li:first-child {
     flex-basis: auto;
     margin: 0 auto;
     order: 2;
   }
 
-  nav li:nth-child(2),
-  nav li:nth-child(3) {
+  .main-nav li:nth-child(2),
+  .main-nav li:nth-child(3) {
     order: 1;
   }
 
-  nav li:nth-child(4),
-  nav li:nth-child(5) {
+  .main-nav li:nth-child(4),
+  .main-nav li:nth-child(5) {
     order: 3;
   }
 
