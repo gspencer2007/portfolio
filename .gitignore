@@ -7,8 +7,5 @@ thumbs.db
 # Virtual Studio Code folder  
 .vscode/
 
-# Ingnore certs folder
-docs/certs/
-
 # Ingnore styleguide
 guide/

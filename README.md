@@ -1,6 +1,4 @@
-# My Portfolio
-
-Welcome to my portfolio.
+# My README file
 
 ## Skills
 
@@ -11,3 +9,4 @@ Below is a _list_ of my **technical skills**:
 - HTML
 - CSS
 - JavaScript
+
