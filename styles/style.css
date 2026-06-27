@@ -338,6 +338,7 @@ ul svg {
 
 .project li {
   padding: 0.5rem 0.75rem;
+  font-family: var(--ff-display);
   color: var(--white);
   border-radius: 8px;
   background-color: var(--marina);
