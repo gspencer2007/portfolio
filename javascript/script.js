@@ -1,9 +1,15 @@
-let copyright = document.getElementsByClassName("copyright")[0];
+/*
+While it’s important to know what global scope is,
+it’s best practice to not define variables in the global scope.
+*/
 
-const currentDate = new Date();
-const thisYear = currentDate.getFullYear();
+function updateCopyright() {
+  const copyright = document.getElementsByClassName("copyright")[0];
 
-// String Interpolation uses backticks [` `] NOT quotations [' ']
-copyright.innerHTML = `&copy; ${thisYear} Geoffrey Spencer. All rights reserved.`;
+  const currentDate = new Date();
+  const thisYear = currentDate.getFullYear();
 
-console.log("Welcome to Playground!");
+  copyright.innerHTML = `&copy; <time>${thisYear}</time> Geoffrey Spencer. All rights reserved.`;
+}
+
+updateCopyright();
