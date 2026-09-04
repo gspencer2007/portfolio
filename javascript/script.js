@@ -9,7 +9,7 @@ function updateCopyright() {
   const currentDate = new Date();
   const thisYear = currentDate.getFullYear();
 
-  copyright.innerHTML = `&copy; <time>${thisYear}</time> Geoffrey Spencer. All rights reserved.`;
+  copyright.innerHTML = `&copy; <time>${thisYear}</time> Geoffrey&nbsp;Spencer. All rights reserved.`;
 }
 
 updateCopyright();
